@@ -1,3 +1,6 @@
+pe_status_check::indicator_exclusions:
+  - 'S0001'
+  - 'S0003'
 pe_status_check::checks:
   S0001: "Determines if Puppet agent Service is running"
   S0002: "Determines if pxp-agent Service is running"
