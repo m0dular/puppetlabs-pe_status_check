@@ -7,7 +7,7 @@
 # @param indicator_exclusions
 #   List of disabled indicators, place any indicator ids you do not wish to report on in this list
 plan pe_status_check::infra_summary(
-  Array[String[1]] $indicator_exclusions = [],
+  Array[String[1]] $indicator_exclusions = lookup('pe_status_check::indicator_exclusions'),
   Optional[TargetSpec] $targets          = undef,
 ) {
   # Query PuppetDB if $targets is not unspecified
